@@ -275,8 +275,9 @@ for _, v in ipairs(encrypt_methods_ss_aead) do o:value(v, v:upper()) end
 o.rmempty = false
 o:depends("ss_aead", "1")
 
-o = s:option(Value, "ss_aead_psw", translate("Password"))
+o = s:option(Value, "ss_aead_pwd", translate("Password"))
 o.password = true
+o.default = "AEAD_AES_128_GCM"
 o.rmempty = true
 o:depends("ss_aead", "1")
 

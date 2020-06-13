@@ -51,7 +51,7 @@ local trojan = {
     shadowsocks = (server.ss_aead == "1") and {
         enabled = true,
         method = (server.ss_aead_method ~= nil) and server.ss_aead_method or "AEAD_AES_128_GCM",
-        password = (server.ss_aead_psw ~= nil) and server.ss_aead_psw or ""
+        password = (server.ss_aead_pwd ~= nil) and server.ss_aead_pwd or ""
         } or nil,
         tcp = {
             no_delay = true,
